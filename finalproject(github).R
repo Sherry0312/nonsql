@@ -176,7 +176,11 @@ for(i in 1:length(postUrl)){
       tags2<-c(tags2,people)
     }else{
       AllTag<-c(AllTag,2)
-      AllTagpeople<-c(AllTagpeople,"n")
+      for(i in 2:length(people)){
+        all<-paste(one,people[i],sep = ",")
+        one<-all
+      }
+      AllTagpeople<-c(AllTagpeople,all)
       tags2<-c(tags2,people)
     }
   }
